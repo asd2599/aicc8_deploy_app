@@ -15,6 +15,9 @@ app.use(express.json()); // json data parsing
 app.get("/", (request, response) => {
     response.send("This is the main App for deployment");
 });
+
+app.use(require('./routes/getRoutes'));
+
 // 4. listen 설정
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
