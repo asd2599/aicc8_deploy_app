@@ -1,16 +1,16 @@
 /* ====== Common Post Request Function ====== */
 export async function postRequest(url, options) {
   const defaultOptions = {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     ...options,
   };
 
   return await fetch(url, defaultOptions).then((response) => {
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     return response.json();
   });
@@ -19,15 +19,15 @@ export async function postRequest(url, options) {
 /* ====== Common Put Request Function ====== */
 export async function putRequest(url, options) {
   const defaultOptions = {
-    method: 'PUT',
+    method: "PUT",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     ...options,
   };
   return await fetch(url, defaultOptions).then((response) => {
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     return response.json();
   });
@@ -37,7 +37,7 @@ export async function putRequest(url, options) {
 export async function patchRequest(url, options) {
   return await fetch(url, options).then((response) => {
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     return response.json();
   });
@@ -47,7 +47,7 @@ export async function patchRequest(url, options) {
 export async function deleteRequest(url, options) {
   return await fetch(url, options).then((response) => {
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     return response.json();
   });
@@ -57,7 +57,7 @@ export async function deleteRequest(url, options) {
 export async function getRequest(url) {
   return await fetch(url).then((response) => {
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     return response.json();
   });
